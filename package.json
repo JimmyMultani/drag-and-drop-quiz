@@ -1,11 +1,11 @@
 {
-  "name": "kitchen-duty",
-  "description": "Kitchen Duty app for the office",
+  "name": "drag-and-drop-quiz",
+  "description": "Test app for a quiz that uses a drag and drop UI.",
   "version": "0.1.0",
   "author": "Jimmy Multani",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JimmyMultani/kitchen-duty"
+    "url": "https://github.com/JimmyMultani/drag-and-drop-quiz"
   },
   "devDependencies": {
     "babel": "^6.3.26",

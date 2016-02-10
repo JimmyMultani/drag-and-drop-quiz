@@ -1,4 +1,4 @@
-starter
+Drag and Drop UI Quiz
 =======
 
 HTML, Sass, JS starter kit running on Gulp.
