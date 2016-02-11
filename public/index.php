@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Starter</title>
+	<title>Drag and Drop Quiz</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Edit address bar colour to match site theme -->
