@@ -1,28 +1,28 @@
 Drag and Drop UI Quiz
 =======
 
-HTML, Sass, JS starter kit running on Gulp.
+A simple questionnaire that uses HTML5 drag and drop features and page transitions.
+
+This project uses HTML, Sass, ES6/JS and is compiled through Gulp.
 
 ***using LibSass, with Susy***
 
 ## Requirements
- - Node (v4.2.3)
- - npm (2.14.7)
- - browser-sync (```npm install -g browser-sync```) (2.10.0)
+ - Node (v4.2.x)
+ - npm (2.14.x)
+ - browser-sync (```npm install -g browser-sync```) (2.11.x)
  - Gulp (```npm install -g gulp```) ([CLI] v3.9.0)
- - bower (not exactly required but very useful to quickly add librairies to your project)
-	- bower search plugin
-	- copy the required files manually into your project from /bower_components into /src//js/libs
 
 ## Installation
+- vagrant up
 - npm install
+- gulp
 
 ## Configuration
 - gulpfile.js
 	- BrowserSync
 		- If you already have a server, read the instructions inside the gulpfile
 - Sass
-	- set Susy settings (if required) in _variables.scss
 	- set other defaults in _variables.scss (font-stacks, link colors, etc)
 
 ## Usage
@@ -42,8 +42,3 @@ HTML, Sass, JS starter kit running on Gulp.
 - small   --> max-width: 599px
 - xsmall  --> max-width: 479px
 ```
-
-## ToDo's
-- ~~review TITOOLBOX.isMobile() (we could find a more bulletproof solution)~~
-	- Looks like [device.js](https://github.com/matthewhudson/device.js) is a lot better/solid, include it on a per project basis
-- add SCSS lint
