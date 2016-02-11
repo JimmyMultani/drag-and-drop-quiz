@@ -7,21 +7,43 @@ Shell
 
 main {
 	@include clearfix;
+	width: 100vw;
+	height: 100vh;
 }
 
 .quiz__container {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	margin: 0 auto;
+	align-items: stretch;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.4s ease-in-out;
+	opacity: 0;
+
+	&:first-child { display: block; }
+
+	&.active {
+		opacity: 1;
+	}
+}
+
+.quiz__list {
 	display: flex;
-	background-color: rgba(64, 64, 128, 1);
-	align-items: stretch;;
-}
-
-.quiz__list,
-.quiz__dropbox {
-	width: 50%;
+	min-height: 100px;
+	background-color: rgba(64, 64, 128, 0.7);
+	margin-bottom: 10px;
 }
 
 .quiz__dropbox {
-	min-height: 50px;
+	display: flex;
+	width: 300px;
+	height: 400px;
+	background-color: rgba(64, 64, 128, 0.7);
+	margin: 0 auto;
 }
 
 /*
@@ -30,25 +52,21 @@ main {
  */
 .quiz__item,
 .gu-mirror {
-  margin: 10px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.15);
-  transition: opacity 0.4s ease-in-out;
-}
-.quiz__item {
-  cursor: move;
-  cursor: grab;
+	margin: 10px;
+	transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 
-  img { width: 100%; }
+	&.hide { transform: scale(0); }
 }
+
+.quiz__item {
+	cursor: move;
+	cursor: grab;
+
+	img { width: 100px; }
+}
+
 .gu-mirror {
-  cursor: grabbing;
-}
-.container .ex-moved {
-  background-color: #e74c3c;
-}
-.container.ex-over {
-  background-color: rgba(255, 255, 255, 0.3);
+	cursor: grabbing;
 }
 
 
