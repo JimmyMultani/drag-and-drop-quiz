@@ -1,0 +1,30 @@
+.radio {
+    display: flex;
+    list-style: none;
+    width: 600px;
+    padding: 0;
+    margin: 0 auto;
+    flex-flow: wrap;
+
+    li {
+        width: 50%;
+        position: relative;
+
+        label {
+            display: block;
+            background: yellow;
+        }
+
+        input[type="radio"]:checked + label {
+            background: red;
+        }
+
+        input {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

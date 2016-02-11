@@ -27,19 +27,24 @@
 		</section>
 
 		<section id="quiz--2" class="quiz__container quiz__radio" data-page="2">
-			<div class="radio">
-				<label for="radio_1">Radio 1</label>
-				<input type="radio" name="radio" id="radio_1" value="">
-
-				<label for="radio_2">Radio 2</label>
-				<input type="radio" name="radio" id="radio_2" value="">
-
-				<label for="radio_3">Radio 3</label>
-				<input type="radio" name="radio" id="radio_3" value="">
-
-				<label for="radio_4">Radio 4</label>
-				<input type="radio" name="radio" id="radio_4" value="">
-			</div>
+			<ul class="radio">
+				<li>
+					<input type="radio" name="radio" id="radio_1" value="">
+					<label for="radio_1">Radio 1</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_2" value="">
+					<label for="radio_2">Radio 2</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_3" value="">
+					<label for="radio_3">Radio 3</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_4" value="">
+					<label for="radio_4">Radio 4</label>
+				</li>
+			</ul>
 
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
@@ -59,19 +64,24 @@
 		</section>
 
 		<section id="quiz--4" class="quiz__container quiz__radio" data-page="4">
-			<div class="radio">
-				<label for="radio_5">Radio 1</label>
-				<input type="radio" name="radio" id="radio_5" value="">
-
-				<label for="radio_6">Radio 2</label>
-				<input type="radio" name="radio" id="radio_6" value="">
-
-				<label for="radio_7">Radio 3</label>
-				<input type="radio" name="radio" id="radio_7" value="">
-
-				<label for="radio_8">Radio 4</label>
-				<input type="radio" name="radio" id="radio_8" value="">
-			</div>
+			<ul class="radio">
+				<li>
+					<input type="radio" name="radio" id="radio_5" value="">
+					<label for="radio_5">Radio 1</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_6" value="">
+					<label for="radio_6">Radio 2</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_7" value="">
+					<label for="radio_7">Radio 3</label>
+				</li>
+				<li>
+					<input type="radio" name="radio" id="radio_8" value="">
+					<label for="radio_8">Radio 4</label>
+				</li>
+			</ul>
 
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
