@@ -5,20 +5,52 @@ Shell
 	@include container;
 }
 
-.col1 {
-	@include span(6);
-}
-
-.col2 {
-	@include span(6 last);
-}
-
-.col {
-}
-
 main {
 	@include clearfix;
 }
+
+.quiz__container {
+	display: flex;
+	background-color: rgba(64, 64, 128, 1);
+	align-items: stretch;;
+}
+
+.quiz__list,
+.quiz__dropbox {
+	width: 50%;
+}
+
+.quiz__dropbox {
+	min-height: 50px;
+}
+
+/*
+ * note that styling gu-mirror directly is a bad practice because it's too generic.
+ * you're better off giving the draggable elements a unique class and styling that directly!
+ */
+.quiz__item,
+.gu-mirror {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: opacity 0.4s ease-in-out;
+}
+.quiz__item {
+  cursor: move;
+  cursor: grab;
+
+  img { width: 100%; }
+}
+.gu-mirror {
+  cursor: grabbing;
+}
+.container .ex-moved {
+  background-color: #e74c3c;
+}
+.container.ex-over {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 
 
 /* =======================================================================

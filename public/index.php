@@ -17,10 +17,33 @@
 	<script src="assets/js/modernizr.js"></script>
 </head>
 
-<body id="kd" data-controller="module" data-action="">
-	<div class="kd-calendar">
-		CALENDAR APP
-	</div>
+<body id="dndq" data-controller="home" data-action="">
+
+	<main role="main">
+			<section class="quiz__container">
+				<div id="top-defaults" class="quiz__list">
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+					<div class="quiz__item">
+						<img src="http://placehold.it/400x60" alt="" />
+					</div>
+				</div>
+				<div id="bottom-defaults" class="quiz__dropbox"></div>
+			</section>
+	</main>
 
 	<script src="assets/js/app.min.js"></script>
 </body>

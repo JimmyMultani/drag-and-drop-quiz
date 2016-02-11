@@ -2,7 +2,7 @@ import $ from 'jquery';
 window.jQuery = $;
 
 import common from './common';
-// import controllerHome from '../pages/home';
+import controllerHome from '../pages/home';
 
 export default function() {
     console.log('router');
@@ -13,4 +13,8 @@ export default function() {
     // }
 
     common();
+
+    if(CONTROLLER === 'home' && typeof controllerHome === 'function') {
+        controllerHome();
+    }
 }

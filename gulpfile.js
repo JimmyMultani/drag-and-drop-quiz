@@ -184,7 +184,10 @@ gulp.task('scripts', ['es6-commonjs'], function(){
 	.pipe(buffer())
 	.pipe(uglify())
 	.pipe(rename('app.min.js'))
-	.pipe(gulp.dest(options.paths.destJs));
+	.pipe(notify('JS compiled'))
+	.pipe(size({title: 'JS'}))
+	.pipe(gulp.dest(options.paths.destJs))
+	.pipe(reload({stream: true, once: true}));
 });
 
 // Copy Modernizr
