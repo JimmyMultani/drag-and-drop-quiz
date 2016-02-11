@@ -182,8 +182,10 @@ gulp.task('scripts', ['es6-commonjs'], function(){
 	return browserify([options.srcPath + 'temp/app.js']).bundle()
 	.pipe(source('app.js'))
 	.pipe(buffer())
+	.pipe(sourcemaps.init({loadMaps: true})) // Extract the inline sourcemaps
 	.pipe(uglify())
 	.pipe(rename('app.min.js'))
+	.pipe(sourcemaps.write('./', {sourceRoot:'./'})) // Set folder for sourcemaps to output to
 	.pipe(notify('JS compiled'))
 	.pipe(size({title: 'JS'}))
 	.pipe(gulp.dest(options.paths.destJs))
