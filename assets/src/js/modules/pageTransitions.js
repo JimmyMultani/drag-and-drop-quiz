@@ -4,8 +4,8 @@ export default function() {
     var nextButton = document.querySelectorAll('.quiz__next'),
         resetButton = document.querySelectorAll('.quiz__reset');
 
-    $(nextButton).on('click', function() {
-        console.log(this.parentNode);
+    $(nextButton).on('click', function(event) {
+        event.preventDefault;
 
         let pageId = this.parentNode.getAttribute('data-page');
 
@@ -37,7 +37,7 @@ function showQuizSlide(pageId) {
 
     quizSlide.style.display = 'block';
 
-    setTimeout( () => {        
+    setTimeout( () => {
         quizSlide.classList.add('active');
 
         if ($('#quiz--' + pageId).hasClass('quiz__end')) {
@@ -51,4 +51,11 @@ function showQuizSlide(pageId) {
 function resetQuiz() {
     hideQuizSlide(6);
     showQuizSlide(1);
+
+    // reset radio submits
+    let radioSubmit = document.querySelectorAll('.quiz__radio .quiz__next');
+
+    for (var i = 0; i < radioSubmit.length; i++) {
+        radioSubmit[i].setAttribute('disabled', 'disabled');
+    }
 }

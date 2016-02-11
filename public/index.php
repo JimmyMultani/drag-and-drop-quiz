@@ -26,8 +26,8 @@
 			<button class="btn quiz__next" type="button" name="button">Start</button>
 		</section>
 
-		<section id="quiz--2" class="quiz__container" data-page="2">
-			<div class="">
+		<section id="quiz--2" class="quiz__container quiz__radio" data-page="2">
+			<div class="radio">
 				<label for="radio_1">Radio 1</label>
 				<input type="radio" name="radio" id="radio_1" value="">
 
@@ -41,7 +41,7 @@
 				<input type="radio" name="radio" id="radio_4" value="">
 			</div>
 
-			<button class="btn quiz__next" type="button" name="button">Next</button>
+			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
 		<section id="quiz--3" class="quiz__container" data-page="3">
@@ -58,22 +58,22 @@
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
-		<section id="quiz--4" class="quiz__container" data-page="4">
-			<div class="">
-				<label for="radio_1">Radio 1</label>
-				<input type="radio" name="radio" id="radio_1" value="">
+		<section id="quiz--4" class="quiz__container quiz__radio" data-page="4">
+			<div class="radio">
+				<label for="radio_5">Radio 1</label>
+				<input type="radio" name="radio" id="radio_5" value="">
 
-				<label for="radio_2">Radio 2</label>
-				<input type="radio" name="radio" id="radio_2" value="">
+				<label for="radio_6">Radio 2</label>
+				<input type="radio" name="radio" id="radio_6" value="">
 
-				<label for="radio_3">Radio 3</label>
-				<input type="radio" name="radio" id="radio_3" value="">
+				<label for="radio_7">Radio 3</label>
+				<input type="radio" name="radio" id="radio_7" value="">
 
-				<label for="radio_4">Radio 4</label>
-				<input type="radio" name="radio" id="radio_4" value="">
+				<label for="radio_8">Radio 4</label>
+				<input type="radio" name="radio" id="radio_8" value="">
 			</div>
 
-			<button class="btn quiz__next" type="button" name="button">Next</button>
+			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
 		<section id="quiz--5" class="quiz__container" data-page="5">
@@ -82,9 +82,10 @@
 
 			<form class="" action="" method="post">
 				<input type="email" name="name" value="">
+				<button class="btn quiz__next" type="button" name="button">Next</button>
 			</form>
 
-			<button class="btn quiz__next" type="button" name="button">Next</button>
+			<a href="#" class="quiz__next">No thanks</a>
 		</section>
 
 		<section id="quiz--6" class="quiz__container quiz__end" data-page="6">

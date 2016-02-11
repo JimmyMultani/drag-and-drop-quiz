@@ -48,10 +48,5 @@ $susy: (
 	math: fluid,
 	output: float,
 	gutter-position: after,
-	container: 940px,
-	debug: (
-		image: show,
-		output: overlay,
-		toggle: top right,
-	)
+	container: 940px
 );
