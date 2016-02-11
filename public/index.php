@@ -81,15 +81,16 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 			<form class="" action="" method="post">
-				<input type="email" name="name" value="">
-				<button class="btn quiz__next" type="button" name="button">Next</button>
+				<input type="email" name="name" value="" palceholder="Email Address">
 			</form>
+
+			<button class="btn quiz__next" type="button" name="button">Next</button>
 
 			<a href="#" class="quiz__next">No thanks</a>
 		</section>
 
 		<section id="quiz--6" class="quiz__container quiz__end" data-page="6">
-			<h1>Finish!</h1>
+			<h1>Thanks for playing!</h1>
 
 			<button class="btn quiz__reset" type="button" name="button">Start over</button>
 		</section>

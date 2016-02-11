@@ -1,6 +1,12 @@
 import $ from 'jquery';
 
+var resetTimer;
+
 export default function() {
+    addListeners();
+}
+
+let addListeners = function() {
     var nextButton = document.querySelectorAll('.quiz__next'),
         resetButton = document.querySelectorAll('.quiz__reset');
 
@@ -19,11 +25,13 @@ export default function() {
     $(resetButton).on('click', function() {
         console.log(this.parentNode);
 
+        window.clearTimeout(resetTimer);
+
         resetQuiz();
     });
 }
 
-function hideQuizSlide(pageId) {
+let hideQuizSlide = function(pageId) {
     let quizSlide = document.getElementById('quiz--' + pageId);
 
     quizSlide.classList.remove('active');
@@ -32,7 +40,7 @@ function hideQuizSlide(pageId) {
     }, 400);
 }
 
-function showQuizSlide(pageId) {
+let showQuizSlide = function(pageId) {
     let quizSlide = document.getElementById('quiz--' + pageId);
 
     quizSlide.style.display = 'block';
@@ -41,21 +49,37 @@ function showQuizSlide(pageId) {
         quizSlide.classList.add('active');
 
         if ($('#quiz--' + pageId).hasClass('quiz__end')) {
-            setTimeout(() => {
+            resetTimer = window.setTimeout(() => {
                 resetQuiz();
             }, 15000);
         }
     }, 400);
 }
 
-function resetQuiz() {
+let resetQuiz = function() {
     hideQuizSlide(6);
     showQuizSlide(1);
 
     // reset radio submits
     let radioSubmit = document.querySelectorAll('.quiz__radio .quiz__next');
 
-    for (var i = 0; i < radioSubmit.length; i++) {
+    for (let i = 0; i < radioSubmit.length; i++) {
         radioSubmit[i].setAttribute('disabled', 'disabled');
+    }
+
+    resetDragAndDrops();
+}
+
+let resetDragAndDrops = function() {
+    // $('.quiz__dropbox .quiz__item').appendTo('.quiz__list');
+
+    let quizItem = document.querySelectorAll('.quiz__dropbox .quiz__item');
+
+    for (let i = 0; i < quizItem.length; i++) {
+        quizItem[i].style.display = '';
+        quizItem[i].classList.remove('hide');
+
+        let list = quizItem[i].parentNode.previousElementSibling;
+        list.appendChild(quizItem[i]);
     }
 }
