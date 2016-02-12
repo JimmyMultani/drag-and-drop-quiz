@@ -18,6 +18,11 @@
 </head>
 
 <body id="dndq" data-controller="home" data-action="">
+	<header class="banner">
+		<img class="dndq__logo" src="http://placehold.it/100x50" alt="DNDQ Logo" />
+
+		<button class="quiz__reset" type="button" name="button">Start over</button>
+	</header>
 
 	<main role="main">
 		<section id="quiz--1" class="quiz__container quiz__start active" data-page="1">
@@ -86,15 +91,16 @@
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
-		<section id="quiz--5" class="quiz__container" data-page="5">
+		<section id="quiz--5" class="quiz__container quiz__results" data-page="5">
 			<h1>You are a narwhal!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			<form class="" action="" method="post">
-				<input type="email" name="name" value="" palceholder="Email Address">
+			<form class="email" action="" method="post">
+				<input type="email" name="name" value="" placeholder="Email Address">
+				<input type="checkbox" id="email__optin" name="name" value="">
+				<label for="email__optin">Email optin</label>
+				<button class="btn email__submit" type="button" name="button">Next</button>
 			</form>
-
-			<button class="btn quiz__next" type="button" name="button">Next</button>
 
 			<a href="#" class="quiz__next">No thanks</a>
 		</section>

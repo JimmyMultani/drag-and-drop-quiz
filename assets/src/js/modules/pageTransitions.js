@@ -8,7 +8,8 @@ export default function() {
 
 let addListeners = function() {
     var nextButton = document.querySelectorAll('.quiz__next'),
-        resetButton = document.querySelectorAll('.quiz__reset');
+        resetButton = document.querySelectorAll('.quiz__reset'),
+        submitButton = document.querySelectorAll('.email__submit');
 
     $(nextButton).on('click', function(event) {
         event.preventDefault;
@@ -29,6 +30,19 @@ let addListeners = function() {
 
         resetQuiz();
     });
+
+    $(submitButton).on('click', function() {
+        // submit email information
+        console.log('submit email information');
+
+        let pageId = $(this).closest('.quiz__container').data('page');
+
+        hideQuizSlide(pageId);
+
+        pageId++;
+
+        showQuizSlide(pageId);
+    });
 }
 
 let hideQuizSlide = function(pageId) {
@@ -48,7 +62,9 @@ let showQuizSlide = function(pageId) {
     setTimeout( () => {
         quizSlide.classList.add('active');
 
-        if ($('#quiz--' + pageId).hasClass('quiz__end')) {
+        if ($('#quiz--' + pageId).hasClass('quiz__results')) {
+            console.log('show results');
+        } else if ($('#quiz--' + pageId).hasClass('quiz__end')) {
             resetTimer = window.setTimeout(() => {
                 resetQuiz();
             }, 15000);
@@ -57,8 +73,13 @@ let showQuizSlide = function(pageId) {
 }
 
 let resetQuiz = function() {
-    hideQuizSlide(6);
-    showQuizSlide(1);
+    for (let i = 1; i <= document.querySelectorAll('.quiz__container').length; i++) {
+        if (i === 1) {
+            showQuizSlide(i);
+        } else {
+            hideQuizSlide(i);
+        }
+    }    
 
     // reset radio submits
     let radioSubmit = document.querySelectorAll('.quiz__radio .quiz__next');

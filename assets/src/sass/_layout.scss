@@ -6,13 +6,14 @@ Shell
 main {
 	@include clearfix;
 	width: 100vw;
-	height: 100vh;
+	height: calc(100vh - 50px);
+	position: relative;
 }
 
 .quiz__container {
 	display: none;
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 	text-align: center;
 	margin: 0 auto;
 	align-items: stretch;
@@ -72,7 +73,21 @@ main {
 /* =======================================================================
 Header
 ========================================================================== */
-.banner {}
+.banner {
+	height: 50px;
+
+	.quiz__reset {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.dndq__logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 
 /* =======================================================================
