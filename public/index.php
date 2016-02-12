@@ -34,19 +34,19 @@
 		<section id="quiz--2" class="quiz__container quiz__radio" data-page="2">
 			<ul class="radio">
 				<li>
-					<input type="radio" name="radio" id="radio_1" value="">
+					<input type="radio" name="radio1" id="radio_1" value="">
 					<label for="radio_1">Radio 1</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_2" value="">
+					<input type="radio" name="radio1" id="radio_2" value="">
 					<label for="radio_2">Radio 2</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_3" value="">
+					<input type="radio" name="radio1" id="radio_3" value="">
 					<label for="radio_3">Radio 3</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_4" value="">
+					<input type="radio" name="radio1" id="radio_4" value="">
 					<label for="radio_4">Radio 4</label>
 				</li>
 			</ul>
@@ -54,36 +54,22 @@
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
-		<section id="quiz--3" class="quiz__container quiz__dnd" data-page="3">
-			<div id="top-defaults" class="quiz__list">
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
-			</div>
-			<div id="bottom-defaults" class="quiz__dropbox"></div>
-
-			<button class="btn quiz__next" type="button" name="button">Next</button>
-		</section>
-
-		<section id="quiz--4" class="quiz__container quiz__radio" data-page="4">
+		<section id="quiz--3" class="quiz__container quiz__radio" data-page="3">
 			<ul class="radio">
 				<li>
-					<input type="radio" name="radio" id="radio_5" value="">
+					<input type="radio" name="radio2" id="radio_5" value="">
 					<label for="radio_5">Radio 1</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_6" value="">
+					<input type="radio" name="radio2" id="radio_6" value="">
 					<label for="radio_6">Radio 2</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_7" value="">
+					<input type="radio" name="radio2" id="radio_7" value="">
 					<label for="radio_7">Radio 3</label>
 				</li>
 				<li>
-					<input type="radio" name="radio" id="radio_8" value="">
+					<input type="radio" name="radio2" id="radio_8" value="">
 					<label for="radio_8">Radio 4</label>
 				</li>
 			</ul>
@@ -91,7 +77,54 @@
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
-		<section id="quiz--5" class="quiz__container quiz__results" data-page="5">
+		<section id="quiz--4" class="quiz__container quiz__dnd" data-page="4">
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+
+			<div id="outer-dropzone" class="dropzone">#dropzone</div>
+
+			<button class="btn quiz__next" type="button" name="button">Next</button>
+		</section>
+
+		<section id="quiz--5" class="quiz__container quiz__dnd" data-page="5">
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+
+			<div id="outer-dropzone" class="dropzone">#dropzone</div>
+
+			<button class="btn quiz__next" type="button" name="button">Next</button>
+		</section>
+
+		<section id="quiz--6" class="quiz__container quiz__radio" data-page="6">
+			<img src="http://placehold.it/200x200" alt="" />
+
+			<ul class="radio">
+				<li>
+					<input type="radio" name="radio3" id="radio_9" value="">
+					<label for="radio_9">Radio 1</label>
+				</li>
+				<li>
+					<input type="radio" name="radio3" id="radio_10" value="">
+					<label for="radio_10">Radio 2</label>
+				</li>
+				<li>
+					<input type="radio" name="radio3" id="radio_11" value="">
+					<label for="radio_11">Radio 3</label>
+				</li>
+				<li>
+					<input type="radio" name="radio3" id="radio_12" value="">
+					<label for="radio_12">Radio 4</label>
+				</li>
+			</ul>
+
+			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
+		</section>
+
+		<section id="quiz--7" class="quiz__container quiz__results" data-page="7">
 			<h1>You are a narwhal!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -105,7 +138,21 @@
 			<a href="#" class="quiz__next">No thanks</a>
 		</section>
 
-		<section id="quiz--6" class="quiz__container quiz__end" data-page="6">
+		<section id="quiz--8" class="quiz__container quiz__recipes" data-page="8">
+			<h1>You are a narwhal!</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<form class="email" action="" method="post">
+				<input type="email" name="name" value="" placeholder="Email Address">
+				<input type="checkbox" id="email__optin" name="name" value="">
+				<label for="email__optin">Email optin</label>
+				<button class="btn email__submit" type="button" name="button">Next</button>
+			</form>
+
+			<a href="#" class="quiz__next">No thanks</a>
+		</section>
+
+		<section id="quiz--9" class="quiz__container quiz__end" data-page="9">
 			<h1>Thanks for playing!</h1>
 
 			<button class="btn quiz__reset" type="button" name="button">Start over</button>

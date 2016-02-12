@@ -1,31 +1,19 @@
 import $ from 'jquery';
-import dragula from 'dragula';
-import interact from 'interact.js';
-
 window.jQuery = $;
-window.dragula = dragula;
 
 import pageTransitions from '../modules/pageTransitions.js';
+import dragAndDrop from '../modules/dragAndDrop.js';
 
 export default function() {
     console.log('home');
 
     pageTransitions();
+    dragAndDrop();
 
-    var drake = dragula([
-        document.getElementById('top-defaults'),
-        document.getElementById('bottom-defaults')
-    ]);
+    addListeners();
+}
 
-    drake.on('drop', function(el, target, source, sibling) {
-        console.log(el.parentNode);
-        console.log(el, target, source, sibling);
-        if (el.parentNode === document.getElementById('bottom-defaults')) {
-            el.classList.add('hide');
-            setTimeout( () => { el.style.display = 'none'; }, 400);
-        }
-    });
-
+let addListeners = function() {
     $('.quiz__radio input[type="radio"]').on('change', function() {
         console.log($(this).closest('.quiz__container').find('.quiz__next'));
 
