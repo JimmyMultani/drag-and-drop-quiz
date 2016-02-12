@@ -172,9 +172,12 @@ gulp.task('clean-temp', function(cb){
 
 gulp.task('es6-commonjs', ['clean-temp'], function(){
 	return gulp.src([
-		options.paths.js + '**/*.js'
+		options.paths.js + '**/*.js',
+		'!' + options.paths.js + 'libs/modernizr.js'
 	])
+	.pipe(gutil.env.type !== 'prod' ? sourcemaps.init() : gutil.noop())
 	.pipe(babel(options.babelrc))
+	.pipe(gutil.env.type !== 'prod' ? sourcemaps.write() : gutil.noop())
 	.pipe(gulp.dest(options.srcPath + 'temp/'));
 });
 
@@ -182,10 +185,8 @@ gulp.task('scripts', ['es6-commonjs'], function(){
 	return browserify([options.srcPath + 'temp/app.js']).bundle()
 	.pipe(source('app.js'))
 	.pipe(buffer())
-	.pipe(sourcemaps.init({loadMaps: true})) // Extract the inline sourcemaps
-	.pipe(uglify())
+	.pipe(gutil.env.type === 'prod' ? uglify(options.uglify) : gutil.noop())
 	.pipe(rename('app.min.js'))
-	.pipe(sourcemaps.write('./', {sourceRoot:'./'})) // Set folder for sourcemaps to output to
 	.pipe(notify('JS compiled'))
 	.pipe(size({title: 'JS'}))
 	.pipe(gulp.dest(options.paths.destJs))
