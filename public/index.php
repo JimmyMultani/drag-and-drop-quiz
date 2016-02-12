@@ -128,25 +128,20 @@
 			<h1>You are a narwhal!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			<form class="email" action="" method="post">
-				<input type="email" name="name" value="" placeholder="Email Address">
-				<input type="checkbox" id="email__optin" name="name" value="">
-				<label for="email__optin">Email optin</label>
-				<button class="btn email__submit" type="button" name="button">Next</button>
-			</form>
+			<img src="http://placehold.it/100x100" alt="" />
 
-			<a href="#" class="quiz__next">No thanks</a>
+			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
 		<section id="quiz--8" class="quiz__container quiz__recipes" data-page="8">
-			<h1>You are a narwhal!</h1>
+			<h1>More stuff!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 			<form class="email" action="" method="post">
 				<input type="email" name="name" value="" placeholder="Email Address">
 				<input type="checkbox" id="email__optin" name="name" value="">
 				<label for="email__optin">Email optin</label>
-				<button class="btn email__submit" type="button" name="button">Next</button>
+				<button class="btn email__submit" type="button" name="button">Send</button>
 			</form>
 
 			<a href="#" class="quiz__next">No thanks</a>
