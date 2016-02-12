@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "dragula": "^3.6.6",
+    "interact.js": "^1.2.6",
     "jquery": "^2.2.0"
   }
 }

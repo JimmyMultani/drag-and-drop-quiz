@@ -54,7 +54,7 @@
 			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
 		</section>
 
-		<section id="quiz--3" class="quiz__container" data-page="3">
+		<section id="quiz--3" class="quiz__container quiz__dnd" data-page="3">
 			<div id="top-defaults" class="quiz__list">
 				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>
 				<div class="quiz__item"><img src="http://placehold.it/100x100" alt="" /></div>

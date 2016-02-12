@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import dragula from 'dragula';
+import interact from 'interact.js';
 
 window.jQuery = $;
 window.dragula = dragula;
