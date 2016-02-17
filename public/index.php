@@ -99,32 +99,7 @@
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
-		<section id="quiz--6" class="quiz__container quiz__radio" data-page="6">
-			<img src="http://placehold.it/200x200" alt="" />
-
-			<ul class="radio">
-				<li>
-					<input type="radio" name="radio3" id="radio_9" value="">
-					<label for="radio_9">Radio 1</label>
-				</li>
-				<li>
-					<input type="radio" name="radio3" id="radio_10" value="">
-					<label for="radio_10">Radio 2</label>
-				</li>
-				<li>
-					<input type="radio" name="radio3" id="radio_11" value="">
-					<label for="radio_11">Radio 3</label>
-				</li>
-				<li>
-					<input type="radio" name="radio3" id="radio_12" value="">
-					<label for="radio_12">Radio 4</label>
-				</li>
-			</ul>
-
-			<button class="btn quiz__next" type="button" name="button" disabled="disabled">Next</button>
-		</section>
-
-		<section id="quiz--7" class="quiz__container quiz__results" data-page="7">
+		<section id="quiz--6" class="quiz__container quiz__results" data-page="6">
 			<h1>You are a narwhal!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -133,21 +108,21 @@
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
-		<section id="quiz--8" class="quiz__container quiz__recipes" data-page="8">
+		<section id="quiz--7" class="quiz__container quiz__recipes" data-page="7">
 			<h1>More stuff!</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-			<form class="email" action="" method="post">
+			<form id="form--email" class="form--email" action="" method="post">
 				<input type="email" name="name" value="" placeholder="Email Address">
 				<input type="checkbox" id="email__optin" name="name" value="">
 				<label for="email__optin">Email optin</label>
-				<button class="btn email__submit" type="button" name="button">Send</button>
+				<button class="btn email__submit" type="submit" name="button">Send</button>
 			</form>
 
 			<a href="#" class="quiz__next">No thanks</a>
 		</section>
 
-		<section id="quiz--9" class="quiz__container quiz__end" data-page="9">
+		<section id="quiz--8" class="quiz__container quiz__end" data-page="8">
 			<h1>Thanks for playing!</h1>
 
 			<button class="btn quiz__reset" type="button" name="button">Start over</button>

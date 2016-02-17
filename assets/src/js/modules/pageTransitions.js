@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+import validateForm from './validateForm.js';
+
 var resetTimer;
 
 export default function() {
@@ -8,8 +10,7 @@ export default function() {
 
 let addListeners = function() {
     var nextButton = document.querySelectorAll('.quiz__next'),
-        resetButton = document.querySelectorAll('.quiz__reset'),
-        submitButton = document.querySelectorAll('.email__submit');
+        resetButton = document.querySelectorAll('.quiz__reset');
 
     $(nextButton).on('click', function(event) {
         event.preventDefault;
@@ -29,19 +30,6 @@ let addListeners = function() {
         window.clearTimeout(resetTimer);
 
         resetQuiz();
-    });
-
-    $(submitButton).on('click', function() {
-        // submit email information
-        console.log('submit email information');
-
-        let pageId = $(this).closest('.quiz__container').data('page');
-
-        hideQuizSlide(pageId);
-
-        pageId++;
-
-        showQuizSlide(pageId);
     });
 }
 
@@ -64,6 +52,8 @@ let showQuizSlide = function(pageId) {
 
         if ($('#quiz--' + pageId).hasClass('quiz__results')) {
             console.log('show results');
+        } else if ($('#quiz--' + pageId).hasClass('quiz__recipes')) {
+            validateForm();
         } else if ($('#quiz--' + pageId).hasClass('quiz__end')) {
             resetTimer = window.setTimeout(() => {
                 resetQuiz();
@@ -79,7 +69,7 @@ let resetQuiz = function() {
         } else {
             hideQuizSlide(i);
         }
-    }    
+    }
 
     // reset radio submits
     let radioSubmit = document.querySelectorAll('.quiz__radio .quiz__next');
