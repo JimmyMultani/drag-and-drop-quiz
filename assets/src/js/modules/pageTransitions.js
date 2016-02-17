@@ -78,6 +78,12 @@ let resetQuiz = function() {
         radioSubmit[i].setAttribute('disabled', 'disabled');
     }
 
+    let radio = document.querySelectorAll('input[type="radio"]');
+    
+    for (let i = 0; i < radio.length; i++) {
+        radio[i].checked = false;
+    }
+
     resetDragAndDrops();
 }
 
