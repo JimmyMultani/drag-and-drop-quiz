@@ -1,6 +1,7 @@
 import $ from 'jquery';
 window.jQuery = $;
 
+import globalVars from './variables';
 import {showQuizSlide, hideQuizSlide} from './pageTransitions.js';
 
 export default function() {
@@ -27,6 +28,9 @@ export default function() {
     for (let i = 0; i < radio.length; i++) {
         radio[i].checked = false;
     }
+
+    // reset count
+    globalVars.count = 0;
 
     resetDragAndDrops();
 }

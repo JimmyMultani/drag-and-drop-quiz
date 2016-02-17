@@ -1,11 +1,10 @@
 import $ from 'jquery';
 window.jQuery = $;
 
+import globalVars from '../modules/variables';
 import {showQuizSlide, hideQuizSlide} from '../modules/pageTransitions.js';
 import resetQuiz from '../modules/resetQuiz.js';
 import dragAndDrop from '../modules/dragAndDrop.js';
-
-var resetTimer;
 
 export default function() {
     console.log('home');
@@ -33,7 +32,7 @@ let addListeners = function() {
     $(resetButton).on('click', function() {
         // console.log(this.parentNode);
 
-        window.clearTimeout(resetTimer);
+        window.clearTimeout(globalVars.resetTimer);
 
         resetQuiz();
     });

@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+import globalVars from './variables';
 import dragAndDrop from './dragAndDrop.js';
 import dragAndHover from './dragAndHover.js';
 import validateForm from './validateForm.js';
@@ -14,8 +15,6 @@ let hideQuizSlide = function(pageId) {
     }, 400);
 }
 
-var resetTimer;
-
 let showQuizSlide = function(pageId) {
     let quizSlide = document.getElementById('quiz--' + pageId);
 
@@ -27,13 +26,14 @@ let showQuizSlide = function(pageId) {
         if ( $(quizSlide).hasClass('quiz__dnd') ) {
             dragAndDrop();
         } else if ( $(quizSlide).hasClass('quiz__dnh') ) {
-            // dragAndHover();
+            dragAndHover();
         } else if ( $(quizSlide).hasClass('quiz__results') ) {
             console.log('show results');
         } else if ( $(quizSlide).hasClass('quiz__recipes') ) {
+            console.log('show recipes');
             validateForm();
         } else if ( $(quizSlide).hasClass('quiz__end') ) {
-            resetTimer = window.setTimeout(() => {
+            globalVars.resetTimer = window.setTimeout(() => {
                 resetQuiz();
             }, 15000);
         }

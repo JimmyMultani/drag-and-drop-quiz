@@ -1,17 +1,22 @@
-#outer-dropzone {
+#plate-dropzone {
+    width: 500px;
     height: 140px;
 }
 
-.dropzone {
+#grate-dropzone {
+    width: 100px;
+    height: 200px;
+}
+
+.dropzone,
+.hoverzone {
     background-color: #ccc;
     margin: 10px auto 30px;
-    padding: 10px;
-    width: 80%;
-    transition: background-color 0.3s;
+    // transition: background-color 0.3s;
 }
 
 .drop-active {
-    border-color: #aaa;
+    background-color: #aaa;
 }
 
 .drop-target {

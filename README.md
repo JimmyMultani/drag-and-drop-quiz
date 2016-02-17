@@ -12,7 +12,7 @@ This project uses HTML, Sass, Babel and is compiled through Gulp.
  - Gulp (```npm install -g gulp```) ([CLI] v3.9.x)
 
 ## Installation
-```bash
+```shell
 vagrant up
 npm install
 gulp
@@ -26,7 +26,7 @@ gulp
 	- set other defaults in \_variables.scss (font-stacks, link colors, etc)
 
 ## Usage
-```bash
+```shell
 gulp serve          -> build for dev
 gulp build          -> build for prod
 gulp serve:dist     -> build and serve the output from the dist build

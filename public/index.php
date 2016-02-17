@@ -85,15 +85,15 @@
 				<div class="draggable drag-drop"><img src="http://placehold.it/100x100" alt="" /></div>
 			</div>
 
-			<div id="outer-dropzone" class="dropzone">#dropzone</div>
+			<div id="plate-dropzone" class="dropzone"></div>
 
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
 		<section id="quiz--5" class="quiz__container quiz__dnh" data-page="5">
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div class="grate-it drag-drop"><img src="http://placehold.it/64x64" alt=""></div>
 
-			<div id="outer-dropzone" class="dropzone">#dropzone</div>
+			<div id="grate-dropzone" class="hoverzone"></div>
 
 			<img src="http://placehold.it/200x200" alt="" />
 

@@ -1,19 +1,22 @@
 import $ from 'jquery';
 window.jQuery = $;
 
+import globalVars from './variables';
 import interact from 'interact.js';
 window.interact = interact;
 
+var count = 0;
+
 export default function() {
-    console.log('dragAndDrop');
+    console.log('dragAndHover');
 
     // target elements with the "draggable" class
-    interact('.draggable').draggable({
+    interact('.grate-it').draggable({
         // enable inertial throwing
         // inertia: true,
         // keep the element within the area of it's parent
         restrict: {
-            restriction: "parent",
+            restriction: '.quiz__dnh',
             endOnly: true,
             elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
         },
@@ -31,9 +34,9 @@ export default function() {
     });
 
     // enable draggables to be dropped into this
-    interact('.dropzone').dropzone({
+    interact('.hoverzone').dropzone({
         // only accept elements matching this CSS selector
-        // accept: '#yes-drop',
+        accept: '.grate-it',
         // Require a 75% element overlap for a drop to be possible
         overlap: 0.75,
 
@@ -48,17 +51,18 @@ export default function() {
 
             // feedback the possibility of a drop
             dropzoneElement.classList.add('drop-target');
+            console.log(globalVars.count++);
             draggableElement.classList.add('can-drop');
-            draggableElement.textContent = 'Dragged in';
+            // draggableElement.textContent = 'Dragged in';
         },
         ondragleave: function (event) {
             // remove the drop feedback style
             event.target.classList.remove('drop-target');
             event.relatedTarget.classList.remove('can-drop');
-            event.relatedTarget.textContent = 'Dragged out';
+            // event.relatedTarget.textContent = 'Dragged out';
         },
         ondrop: function (event) {
-            event.relatedTarget.textContent = 'Dropped';
+            // event.relatedTarget.textContent = 'Dropped';
         },
         ondropdeactivate: function (event) {
             // remove active dropzone feedback
