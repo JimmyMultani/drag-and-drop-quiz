@@ -4,8 +4,6 @@
 
 .dropzone {
     background-color: #ccc;
-    border: dashed 4px transparent;
-    border-radius: 4px;
     margin: 10px auto 30px;
     padding: 10px;
     width: 80%;
@@ -17,23 +15,19 @@
 }
 
 .drop-target {
-    background-color: #29e;
-    border-color: #fff;
-    border-style: solid;
+    background-color: #e92;
 }
 
 .drag-drop {
     display: inline-block;
     min-width: 40px;
-    padding: 2em 0.5em;
     color: #fff;
-    background-color: #29e;
-    border: solid 2px #fff;
+    border: solid 2px #29e;
     transform: translate(0px, 0px);
-    transition: background-color 0.3s;
+    transition: border-color 0.3s;
 }
 
 .drag-drop.can-drop {
     color: #000;
-    background-color: #4e4;
+    border-color: #4e4;
 }

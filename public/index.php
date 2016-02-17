@@ -78,23 +78,24 @@
 		</section>
 
 		<section id="quiz--4" class="quiz__container quiz__dnd" data-page="4">
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+			<div class="slider">
+				<div class="draggable drag-drop"><img src="http://placehold.it/100x100" alt="" /></div>
+				<div class="draggable drag-drop"><img src="http://placehold.it/100x100" alt="" /></div>
+				<div class="draggable drag-drop"><img src="http://placehold.it/100x100" alt="" /></div>
+				<div class="draggable drag-drop"><img src="http://placehold.it/100x100" alt="" /></div>
+			</div>
 
 			<div id="outer-dropzone" class="dropzone">#dropzone</div>
 
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>
 
-		<section id="quiz--5" class="quiz__container quiz__dnd" data-page="5">
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
-			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+		<section id="quiz--5" class="quiz__container quiz__dnh" data-page="5">
 			<div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
 
 			<div id="outer-dropzone" class="dropzone">#dropzone</div>
+
+			<img src="http://placehold.it/200x200" alt="" />
 
 			<button class="btn quiz__next" type="button" name="button">Next</button>
 		</section>

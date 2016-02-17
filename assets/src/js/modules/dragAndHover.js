@@ -7,17 +7,13 @@ window.interact = interact;
 export default function() {
     console.log('dragAndDrop');
 
-    let slider = document.querySelectorAll('.slider');
-
     // target elements with the "draggable" class
-    interact('.draggable', {
-        context: slider
-    }).draggable({
+    interact('.draggable').draggable({
         // enable inertial throwing
         // inertia: true,
         // keep the element within the area of it's parent
         restrict: {
-            restriction: '.quiz__dnd',
+            restriction: "parent",
             endOnly: true,
             elementRect: { top: 0, left: 0, bottom: 1, right: 1 }
         },
@@ -25,7 +21,13 @@ export default function() {
         autoScroll: true,
 
         // call this function on every dragmove event
-        onmove: dragMoveListener
+        onmove: dragMoveListener,
+        // call this function on every dragend event
+        onend: function (event) {
+            var textEl = event.target.querySelector('p');
+
+            textEl && (textEl.textContent = 'moved a distance of ' + (Math.sqrt(event.dx * event.dx + event.dy * event.dy)|0) + 'px');
+        }
     });
 
     // enable draggables to be dropped into this
@@ -47,16 +49,16 @@ export default function() {
             // feedback the possibility of a drop
             dropzoneElement.classList.add('drop-target');
             draggableElement.classList.add('can-drop');
-            // draggableElement.textContent = 'Dragged in';
+            draggableElement.textContent = 'Dragged in';
         },
         ondragleave: function (event) {
             // remove the drop feedback style
             event.target.classList.remove('drop-target');
             event.relatedTarget.classList.remove('can-drop');
-            // event.relatedTarget.textContent = 'Dragged out';
+            event.relatedTarget.textContent = 'Dragged out';
         },
         ondrop: function (event) {
-            // event.relatedTarget.textContent = 'Dropped';
+            event.relatedTarget.textContent = 'Dropped';
         },
         ondropdeactivate: function (event) {
             // remove active dropzone feedback
