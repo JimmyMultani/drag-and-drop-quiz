@@ -1,0 +1,16 @@
+{
+  "name": "drag-and-drop-quiz",
+  "version": "0.1.0",
+  "dependencies": {
+    "interact.js": {
+      "version": "1.2.6",
+      "from": "interact.js@latest",
+      "resolved": "https://registry.npmjs.org/interact.js/-/interact.js-1.2.6.tgz"
+    },
+    "jquery": {
+      "version": "2.2.0",
+      "from": "jquery@>=2.2.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/jquery/-/jquery-2.2.0.tgz"
+    }
+  }
+}
