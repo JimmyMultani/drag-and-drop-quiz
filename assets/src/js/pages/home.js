@@ -1,7 +1,12 @@
 import $ from 'jquery';
 window.jQuery = $;
 
-import globalVars from '../modules/variables';
+var globalVars = window.globalVars = {
+    resetTimer: null,
+    count: 0
+};
+
+import testConnection from '../modules/testConnection.js';
 import {showQuizSlide, hideQuizSlide} from '../modules/pageTransitions.js';
 import resetQuiz from '../modules/resetQuiz.js';
 import dragAndDrop from '../modules/dragAndDrop.js';
@@ -9,6 +14,7 @@ import dragAndDrop from '../modules/dragAndDrop.js';
 export default function() {
     console.log('home');
 
+    testConnection();
     addListeners();
 }
 
@@ -20,7 +26,7 @@ let addListeners = function() {
     $(nextButton).on('click', function(event) {
         event.preventDefault;
 
-        let pageId = this.parentNode.getAttribute('data-page');
+        let pageId = this.closest('.quiz__container').getAttribute('data-page');
 
         hideQuizSlide(pageId);
 
