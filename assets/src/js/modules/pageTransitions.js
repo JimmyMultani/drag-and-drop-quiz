@@ -1,6 +1,5 @@
 import $ from 'jquery';
 
-import globalVars from './variables';
 import dragAndDrop from './dragAndDrop.js';
 import dragAndHover from './dragAndHover.js';
 import validateForm from './validateForm.js';
@@ -40,4 +39,4 @@ let showQuizSlide = function(pageId) {
     }, 400);
 }
 
-export {showQuizSlide, hideQuizSlide}
+export { showQuizSlide, hideQuizSlide }

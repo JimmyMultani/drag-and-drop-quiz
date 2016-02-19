@@ -1,11 +1,6 @@
 import $ from 'jquery';
-window.jQuery = $;
 
-import globalVars from './variables';
 import interact from 'interact.js';
-window.interact = interact;
-
-var count = 0;
 
 export default function() {
     console.log('dragAndHover');
@@ -51,7 +46,7 @@ export default function() {
 
             // feedback the possibility of a drop
             dropzoneElement.classList.add('drop-target');
-            console.log(globalVars.count++);
+            console.log(globalVars.count = globalVars.count + 1);
             draggableElement.classList.add('can-drop');
             // draggableElement.textContent = 'Dragged in';
         },

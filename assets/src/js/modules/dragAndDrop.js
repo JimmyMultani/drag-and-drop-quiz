@@ -1,8 +1,6 @@
 import $ from 'jquery';
-window.jQuery = $;
 
 import interact from 'interact.js';
-window.interact = interact;
 
 export default function() {
     console.log('dragAndDrop');

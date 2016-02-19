@@ -1,7 +1,5 @@
 import $ from 'jquery';
-window.jQuery = $;
 
-import globalVars from './variables';
 import {showQuizSlide, hideQuizSlide} from './pageTransitions.js';
 
 export default function() {
