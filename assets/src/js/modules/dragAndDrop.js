@@ -5,6 +5,11 @@ import interact from 'interact.js';
 export default function() {
     console.log('dragAndDrop');
 
+    init();
+    addListeners();
+}
+
+let init = function() {
     let slider = document.querySelectorAll('.slider');
 
     // target elements with the "draggable" class
@@ -61,6 +66,24 @@ export default function() {
             event.target.classList.remove('drop-active');
             event.target.classList.remove('drop-target');
         }
+    });
+}
+
+let addListeners = function() {
+    var resetButton = document.querySelectorAll('.drag-and-drop__reset')[0];
+    console.log(resetButton);
+
+    resetButton.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        console.log(this);
+
+        let items = $(this).siblings('.slider').find('.slider__item');
+        console.log(items);
+
+        items.removeAttr('style').removeAttr('data-x').removeAttr('data-y').removeClass('can-drop');
+
+        return false;
     });
 }
 
